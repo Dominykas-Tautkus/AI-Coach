@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal AI Performance Coach</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+		 <div id="loading-spinner" class="spinner"></div>
+        <img id="logo" src="static/logo.gif" alt="AI-Coach">
+        <div id="chat-box">
+            <!-- Chat history will be appended here -->
+        </div>
+    </div>
+    
+    <div class="input-area">
+        <button onclick="handleAction('motivate me')">Motivate Me!</button>
+        <button onclick="handleAction('encourage me')">Encourage Me!</button>
+        <button onclick="handleAction('cheer me up')">Cheer Me Up!</button>
+        <button onclick="handleAction('energize me')">Energize Me!</button>
+		<button onclick="handleAction('challenge')">Help Me Tackle The Challenge Ahead!</button>
+		<button onclick="handleAction('adversity')">I'm Faced With Adversity!</button>
+		<button onclick="handleAction('productivity')">Improve My Productivity!</button>
+    </div>
+     <div class="footer">
+        Powered by GPT-4
+    </div>
+	<div class="footer2">
+        AI inspired by real life figures Tony Robbins and Brendon Burchard. 
+    </div>
+    <script src="static/main.js"></script>
+</body>
+</html>
