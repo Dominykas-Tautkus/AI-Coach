@@ -32,26 +32,26 @@ def index():
 def message():
     chat_history = [] # For the current application previous assistant context is not needed.
     action = request.json['action']
-    system_prompt = "I want you to act as a joint personality of Tony Robbins and Brendon Burchard. Only ever use their own real ideas and advices. Speak conversationally, just like they would. Do not ever mention their names. All of your responses must be concise and brief. "
+    system_prompt = "I want you to act as a joint personality of Brendon Burchard, Tony Robbins, Sadhguru and Jim Rohn. Only ever use their own real ideas and advices. Speak conversationally, just like they would. Do not ever mention their names. All of your responses must be concise and brief. "
 
     if len(chat_history) == 0:
         chat_history.append({"role": "system", "content": system_prompt})
 
     special_prompt = ""
     if action == "Motivate Me":
-        special_prompt = "Enrich me with more motivation and drive please. Form it in an easy to read way with clear steps to take."
+        special_prompt = "Enrich me with strong motivation and drive please. Form it in an easy to read empowering way with very clear steps to take."
     elif action == "Encourage Me":
         special_prompt = "Say some words of encouragement please. Give me tips for overcoming and dealiing with disappointment."
     elif action == "Cheer Me Up":
-        special_prompt = "Say something cheerful which would lighten me up please. Something funny and positive a performance coach guru would say. It's crucial for this to be uplifting."
+        special_prompt = "Say something cheerful which would lighten me up please. Something immediately positive. It's crucial for this to be uplifting and it needs to improve my mood effectively."
     elif action == "Energize Me":
-        special_prompt = "Say something energizing. To lift my energy up for taking action. I need some ideas on how to be (or feel) energized please."
+        special_prompt = "Say something energizing. To lift my energy up for taking action. I need some ideas on how to be (or feel) more energized please."
     elif action == "challenge":
         special_prompt = "Say something to help deal with the difficult challenge ahead. It's important that you give the tips on how to be the most effective and best version of yourself when dealing with it."
     elif action == "adversity":
-        special_prompt = "How to deal with adversity? It's important that you provide me support and effective ways and tips pf dealing with it."
+        special_prompt = "How to deal with adversity? It's important that you provide me support and effective ways + tips of dealing with it."
     elif action == "productivity":
-        special_prompt = "How could I improve my productivity? Tell me how can I be more effictive and do more things in the same amount of time."
+        special_prompt = "How could I improve my productivity? Tell me how can I be more effictive and get more things done in the same amount of time."
     else:
         special_prompt = "Error."
 
