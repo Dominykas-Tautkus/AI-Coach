@@ -1,5 +1,5 @@
-# <sup>GPT4</sup>AI-Coach (WIP) 
+# <sup>GPT4</sup>AI-Coach
 
-**Static front-end:** https://dominykas-tautkus.github.io/AI-Coach/ 
+**URL:** https://dominykas-tautkus.github.io/AI-Coach/ 
 
-Back-end is not yet hosted. 
+Back-end hosted on Heroku. 
