@@ -27,7 +27,7 @@ async function handleAction(action) {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/message', {
+        const response = await fetch('https://ai--coach-e9e8ac9df88e.herokuapp.com/message', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

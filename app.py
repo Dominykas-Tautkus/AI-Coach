@@ -1,11 +1,13 @@
 from flask import Flask, request, jsonify, render_template
+from flask_cors import CORS, cross_origin
 import openai
 import os
 import logging
 from dotenv import load_dotenv
-load_dotenv()
 
+load_dotenv()
 app = Flask(__name__)
+CORS(app, resources={r"/message": {"origins": "https://dominykas-tautkus.github.io"}})
 
 DEBUG = os.environ.get('FLASK_DEBUG', False)  # Default is False if not set
 
@@ -26,6 +28,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/message', methods=['POST'])
+@cross_origin(origin='https://dominykas-tautkus.github.io/AI-Coach/')
 def message():
     chat_history = [] # For the current application previous assistant context is not needed.
     action = request.json['action']
