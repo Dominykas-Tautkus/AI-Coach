@@ -2,4 +2,4 @@
 
 **GitHub Pages Front-End:** https://i-am-dom.github.io/AI-Coach/ 
 
-Back-end hosted on Heroku. 
+Back-end deployment is managed through Heroku integration.
