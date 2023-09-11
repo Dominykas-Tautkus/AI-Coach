@@ -28,7 +28,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/message', methods=['POST'])
-@cross_origin(origin='https://dominykas-tautkus.github.io/AI-Coach/')
+@cross_origin(origin='https://i-am-dom.github.io/AI-Coach/')
 def message():
     chat_history = [] # For the current application previous assistant context is not needed.
     action = request.json['action']
