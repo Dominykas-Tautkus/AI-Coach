@@ -13,5 +13,5 @@ The project is coded in Python and utilizes OpenAI's API, openai.ChatCompletion 
 
 **v1.1 Changelog:** 
 
-- Rebased from standard GPT4 to GPT4-Turbo-128k (gpt-4-1106-preview) for updated knowledge cutoff of April 2023 and faster response time (316 chars/s vs 56 chars/s, as measured recently).
+- Rebased from standard GPT4 to GPT4-Turbo-128k (gpt-4-1106-preview) for updated knowledge cutoff of April 2023 and faster response time (316 chars/s vs 56 chars/s, as measured 2023-11-09).
 - Changes related to model change, output length bugfix, minor prompt changes.  
